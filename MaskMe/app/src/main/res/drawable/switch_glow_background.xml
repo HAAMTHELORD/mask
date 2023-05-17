@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="@color/switch_glow_start_color"
+                android:centerColor="@color/switch_glow_center_color"
+                android:endColor="@color/switch_glow_end_color"
+                android:type="radial" />
+            <size android:height="48dp" android:width="48dp" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/switch_glow_background_color" />
+            <size android:height="48dp" android:width="48dp" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+</selector>

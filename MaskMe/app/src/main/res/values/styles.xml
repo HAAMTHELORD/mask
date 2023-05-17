@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="SwitchGlowStyle">
+        <item name="android:background">@drawable/switch_glow_background</item>
+    </style>
+
+</resources>

@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item1"
+        android:title="Clear Data"
+        />
+
+
+
+
+
+    <item
+        android:id="@+id/menu_item2"
+        android:title="Settings"
+        android:icon="@drawable/ic_donate"
+      />
+
+
+    <item
+        android:id="@+id/menu_item3"
+        android:title="Downloads"
+        android:icon="@drawable/ic_settings" />
+    <item
+        android:id="@+id/menu_item4"
+        android:title="Support Dev"
+        android:icon="@drawable/ic_donate" />
+
+    <!-- Add more items as needed -->
+</menu>

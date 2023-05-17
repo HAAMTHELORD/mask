@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:logo="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/security_icon"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/secure" />
+
+            <EditText
+                android:id="@+id/url_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/security_icon"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:hint="Search With Privacy.."
+                android:imeOptions="actionGo"
+                android:inputType="textUri"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/menu"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/three_dots"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <View
+                        android:id="@+id/dimView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#80000000"
+                        android:visibility="gone"/>
+
+
+
+                                <!-- Untraceable toggle button -->
+
+                </WebView>
+
+
+                <TextView
+            android:id="@+id/engines_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;&lt; Swipe To Change Search Engines &gt;&gt; "
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/txtbg"
+            android:textColor="@color/black" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/bottomSheetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="visible"
+            app:behavior_hideable="true"
+
+            app:behavior_peekHeight="200dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+            <Button
+                android:id="@+id/expandButton"
+                android:layout_width="399dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:text="Set Privacy Level"
+                android:textColor="@color/white"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!-- Untraceable toggle button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/untraceable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Untraceable"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="45dp"
+                        android:src="@drawable/question_mark_icon"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!-- Random IP toggle button -->
+                <RelativeLayout
+                    android:id="@+id/virtual_device_id_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/random_ip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Random IP"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/question_mark_icon"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="50dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!-- Virtual Device ID toggle button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/virtual_device"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Virtual Device ID"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:thumbTint="@color/switch_thumb_color"
+                        android:trackTint="@color/switch_track_color"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/question_mark_icon"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="25dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
